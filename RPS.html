@@ -31,7 +31,6 @@
 					break;
 				case 'scissors':	
 					return 'You lose! Scissors beats paper.';
-					
 			}
 		}
 		else if (playerSelection==='rock') {
@@ -40,8 +39,7 @@
 					return 'You lose! Paper beats rock.';
 					break;
 				case 'scissors':	
-					return 'You win! Rock beats scissors.';
-					
+					return 'You win! Rock beats scissors.';				
 			}
 		}		
 		else if (playerSelection==='scissors') {
@@ -50,8 +48,7 @@
 							return 'You win! Scissors beats paper.';
 							break;
 						case 'rock':	
-							return 'You lose! Rock beats scissors.';
-							
+							return 'You lose! Rock beats scissors.';							
 					}
 				}		
 		else {
@@ -62,8 +59,9 @@
 	function game() {
 		let playerScore=0;
 		let computerScore=0;
+		let result=''
 		for (i=0; i<5; i++) {
-			result=Round((prompt('Choose your move'),computerPlay()));
+			result=Round(prompt('Choose your move'),computerPlay());
 			console.log(result);
 			if (result.search('win') > -1) {
 				playerScore++;
@@ -81,7 +79,6 @@
 		else {
 			return 'Tie!';
 		}
-	
 	}
 	
 	console.log(game());
